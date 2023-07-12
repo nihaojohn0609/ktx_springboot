@@ -49,18 +49,15 @@
 		from (select nid, ntitle, nhits, ndate from ktx_notice order by ndate desc)
 	</select>
 
-<!--	<update id="update" parameterType="com.example.korail.dto.NoticeDto">-->
-<!--		update ktx_notice set ntitle=#{ntitle}, ncontent=#{ncontent}-->
-<!--			if(test='nfile != null'){-->
-<!--		        , nfile=#{nfile}, nsfile=#{nsfile}-->
-<!--			}-->
-<!--		where nid=#{nid}-->
-<!--	</update>-->
+	<update id="update" parameterType="com.example.korail.dto.NoticeDto">
+		update ktx_notice set ntitle=#{ntitle}, ncontent=#{ncontent}, nfile=#{nfile}, nsfile=#{nsfile}
+		where nid=#{nid}
+	</update>
 
-<!--	<delete id="delete" parameterType="String">-->
-<!--		delete from ktx_notice where nid=#{nid} -->
-<!--	</delete>-->
-<!--	-->
+	<delete id="delete" parameterType="String">
+		delete from ktx_notice where nid=#{nid}
+	</delete>
+
 <!--	<update id="updateHits" parameterType="String">-->
 <!--		update ktx_notice set nhits=nhits+1 where nid=#{nid}-->
 <!--	</update>-->

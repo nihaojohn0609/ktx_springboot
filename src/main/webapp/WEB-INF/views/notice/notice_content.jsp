@@ -27,7 +27,10 @@
 		
 		<p id="content_title">${notice.ntitle}</p>
 		
-		<p id="content_content">${notice.ncontent}</p>
+		<p id="content_content">${notice.ncontent}</p><br><br><br>
+			<c:if test="${notice.bsfile != null}">
+				<img src="http://localhost:9000/upload/${notice.bsfile}">
+		</c:if>
 		
 		<div>
 		<div class="line2"></div>

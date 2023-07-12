@@ -33,4 +33,9 @@ public class FileService {
             noticeDto.getFile1().transferTo(saveFile);
         }
     }
+
+//    public fileDelete(String oldNsFile) throws Exception {
+//        String projectPath = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\upload\\";
+//
+//    }
 }
