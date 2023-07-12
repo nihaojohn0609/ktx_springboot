@@ -22,18 +22,18 @@
 		<p id="content_define">KTX 홈페이지의 새로운 소식을 확인하세요.</p>
 		
 		<div class="line2"></div>
-		<div class="table_content"><p id="notice_table1">${noticeVo.ntitle}</p><p id="notice_table2">${noticeVo.ndate}</p></div>
+		<div class="table_content"><p id="notice_table1">${notice.ntitle}</p><p id="notice_table2">${notice.ndate}</p></div>
 		<div class="line2"></div>
 		
-		<p id="content_title">${noticeVo.ntitle}</p>
+		<p id="content_title">${notice.ntitle}</p>
 		
-		<p id="content_content">${noticeVo.ncontent}</p>
+		<p id="content_content">${notice.ncontent}</p>
 		
 		<div>
 		<div class="line2"></div>
 			
 			<div class="button">
-				<a href="http://localhost:9000/notice_list.do?category=all&cvalue=all&page=1" class="btn">리스트</a>
+				<a href="/notice_list/all/all/1/" class="btn">리스트</a>
 				<a href="http://localhost:9000/notice_content.do?nid=${nprev}" class="btn" id="click_before"><</a>
 				<a href="http://localhost:9000/notice_content.do?nid=${nnext}" class="btn" id="click_after">></a>
 				<input type="hidden" id="before_hidden" value="${nprev}">

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.korail.repository.PageMapper">
+
+	<select id="totalRowCount" parameterType="com.example.korail.dto.PageDto" resultType="int">
+		select count(*) from
+		<if test='serviceName == "notice"'>
+			ktx_notice
+			<if test = 'category == "title"'>
+				where ntitle like '%'||#{cvalue}||'%'
+			</if>
+			<if test = 'category == "content"'>
+				where ncontent like '%'||#{cvalue}||'%'
+			</if>
+			<if test = 'category == "title_content"'>
+				where ntitle like '%'||#{cvalue}||'%' or ncontent like '%'||#{cvalue}||'%'
+			</if>
+		</if>
+
+	</select>
+
+</mapper>    
